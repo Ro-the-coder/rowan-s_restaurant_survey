@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <title>Rowan's Restaurant Survey</title>
+ <style>
+    body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: pink;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: black;
+  border-color: white;
+  min-width: 300px;
+}
+ </style>
+ </head>
+ <body>
+   <h1 id="title">Rowan's Restaurant Survey</h1>
+   <p id="description">Please let us know how your experience was at Rowan's Restaurant by filling out the survey.</p>
+   <form id="survey-form">
+     <label id="name-label">Full Name:</label> <input id="name" type="text" placeholder="Rowan Henne" required> 
+<label id="email-label">Email: </label><input id="email" type="email" placeholder="rowanhenne@gmail.com" required>
+<label id="number-label">Age (optional): </label><input id="number" type="number" min="13" max="110" placeholder="16"></input>
+<label id="dropdown-label">What was your favorite part of your experience?</label> <select id="dropdown">
+  <option value=""> (select one)</option>
+  <option value="1"> Service </option>
+  <option value="2"> Food </option>
+  <option value="3"> Atmosphere </option>
+  <option value="4"> Other </option>
+  </select>
+  <legend>Did you have a good experience?</legend>
+  <label id="experience"><input id="experience-good" type="radio" name="experience" class="inline" value="1" checked/>Yes</label>
+  <label id="experience"><input id="experience-bad" type="radio" name="experience" class="inline" value="2"/> No</label>
+  <legend>What can we do to improve?</legend>
+  <label id="improvement"><input id="improvement" type="checkbox" name="better service" checked value="1"/>Better Service </label>
+  <label id="improvement"><input id="improvement" type="checkbox" name="Better Food" value="2"/>Better Food</label>
+  <input type="submit" value="submit" id="submit"></input>
+  <textarea id="experience" name="experience" rows="4" col="50" placeholder="Tell us about your experience..."></textarea>
+  </form>
+  </body>
+  </html>
